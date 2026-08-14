@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>미션 테트리스</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="top-bar">
+        <div class="title-block">
+          <h1>🌈 미션 테트리스</h1>
+          <p>초등 5~6학년용! 한 줄을 지우면 더 신나져요!</p>
+        </div>
+        <div class="controls">
+          <button id="startBtn">🚀 게임 시작</button>
+          <button id="pauseBtn">⏸ 일시정지</button>
+          <button id="restartBtn">🔄 다시 시작</button>
+        </div>
+      </header>
+
+      <div id="messageBox" class="message-box">준비됐나요? 시작 버튼을 눌러 미션을 시작해요!</div>
+
+      <main class="main-area">
+        <section class="board-panel">
+          <div class="board-frame">
+            <canvas id="board" width="240" height="480"></canvas>
+          </div>
+        </section>
+
+        <aside class="side-panel">
+          <div class="info-card">
+            <h2>⭐ 점수</h2>
+            <p id="score">0</p>
+          </div>
+          <div class="info-card">
+            <h2>🧹 삭제한 줄</h2>
+            <p id="lines">0</p>
+          </div>
+          <div class="info-card">
+            <h2>🎯 현재 단계</h2>
+            <p id="level">1</p>
+          </div>
+          <div class="info-card">
+            <h2>🎲 다음 블록</h2>
+            <canvas id="next" width="110" height="110"></canvas>
+          </div>
+          <div class="info-card instructions">
+            <h2>🎮 조작법</h2>
+            <ul>
+              <li>← → : 이동</li>
+              <li>↑ : 회전</li>
+              <li>↓ : 빠르게 떨어뜨리기</li>
+              <li>스페이스 : 바로 떨어뜨리기</li>
+            </ul>
+          </div>
+          <div class="info-card mission-card">
+            <h2>✨ 오늘의 미션</h2>
+            <ul>
+              <li>한 줄을 지우면 점수가 올라가요!</li>
+              <li>단계가 올라갈수록 더 빨라져요!</li>
+              <li>레벨 업마다 분위기가 바뀌어요!</li>
+            </ul>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
